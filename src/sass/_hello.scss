@@ -1,0 +1,28 @@
+@import 'variables';
+
+.hello-sect {
+    height: 120vh;
+    width: calc(100vw - 2rem);
+    background-color: $primary-bg;
+    padding-left: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.hello-text {
+    font-size: 6rem;
+}
+
+@media (max-width: $screen-mobile) {
+    .hello-sect {
+        padding-left: 1rem;
+    }
+
+    .hello-text {
+        font-size: 2.5rem;
+    }
+
+    .hello-text > p {
+        margin-bottom: 1rem;
+    }
+}

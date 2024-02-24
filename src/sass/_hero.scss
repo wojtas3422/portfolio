@@ -1,0 +1,73 @@
+@import 'variables';
+
+.hero-letter {
+    color: $accent;
+    font-weight: 700;
+    font-size: 7rem;
+}
+
+.hero-subtitle {
+    color: $secondary-text;
+    font-size: 3rem;
+}
+
+@media (max-width: $screen-mobile) {
+    .hero-letter {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+}
+
+.hero-sect {
+    width: 100vw;
+    height: 100vh;
+    background-color: $primary-bg;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-star {
+    pointer-events: none;
+    width: 90px;
+    aspect-ratio: 1/1;
+    opacity: 0.5;
+    animation: spin 4s infinite linear;
+}
+
+@media (max-width: $screen-mobile) {
+    .hero-star {
+        width: 60px;
+    }
+}
+
+.hero-star-container {
+    position: absolute;
+    cursor: pointer;
+    z-index: 99;
+    translate: -50% -50%;
+}
+
+@keyframes spin {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}
+
+
+.hero-arrow {
+    position: absolute;
+    left: 50%;
+    top: 93%;
+    width: 200px;
+    translate: -50% -50%;
+    cursor: pointer;
+}

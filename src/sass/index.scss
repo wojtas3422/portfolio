@@ -1,0 +1,24 @@
+@use 'sass:color';
+@import "@fontsource/poppins";
+@import "@fontsource/poppins/700.css";
+@import 'hero';
+@import 'variables';
+@import 'hello';
+
+// best css linijka in świat
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Poppins;
+    color: $primary-text;
+    user-select: none;
+}
+
+
+.scrollBody {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+}
