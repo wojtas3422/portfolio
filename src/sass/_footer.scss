@@ -18,6 +18,21 @@ footer {
     font-size: 1.5rem;
 }
 
+@media (max-width: 768px) {
+    .footer-heading {
+        font-size: 1.5rem;
+    }
+
+    .footer-link {
+        font-size: 1rem;
+    }
+
+    footer {
+        justify-content: space-between;
+    }
+
+}
+
 .footer-left {
     display: flex;
     align-items: center;
