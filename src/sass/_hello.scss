@@ -15,6 +15,7 @@
 
 @media (max-width: $screen-mobile) {
     .hello-sect {
+        width: calc(100vw - 1rem);
         padding-left: 1rem;
     }
 

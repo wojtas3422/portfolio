@@ -1,0 +1,131 @@
+@use 'sass:color';
+@import 'variables';
+
+
+.project-sect {
+    background-color: $primary-bg;
+    min-height: 100vh;
+    width: 100vw;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+@media (max-width: 768px) {
+    .project-sect {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .project-container {
+        text-align: center !important;
+        align-items: center !important;
+    }
+}
+
+// img tag
+.project-img {
+    height: 80%;
+    background-position: 50% 50%;
+    margin-right: 2rem;
+    border-radius: 0px 12px 12px 0px;
+    border: 1px solid $accent;
+    
+}
+
+@media (max-width: 768px) {
+    .project-img {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 0px;
+        margin: 0px !important;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+// img tag
+.project-img-right {
+    margin-right: 0;
+    margin-left: 2rem;
+    border-radius: 12px 0px 0px 12px;
+}
+
+// container
+.project-image-right {
+    order: 2;
+}
+
+@media (max-width: 768px) {
+    .project-image-right {
+        order: -1;
+    }
+}
+
+.project-text-right {
+    text-align: right;
+    align-items: end;
+    margin-left: 1rem;
+}
+
+.project-text-left {
+    margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+    .project-text-left,
+    .project-text-right {
+        margin: 0px;
+    }
+}
+
+.project-heading {
+    font-size: 5rem;
+}
+
+.project-desc {
+    font-size: 3rem;
+}
+
+@media (max-width: 768px) {
+    .project-heading {
+        font-size: 3rem;
+    }
+
+    .project-desc {
+        font-size: 1.2rem;
+        padding: 0px 0.5rem 0px 0.5rem;
+    }
+}
+
+.project-button {
+    width: max-content;
+    padding: 1rem;
+    font-size: 2rem;
+    border-radius: 12px;
+    
+    margin-top: 2rem;
+    background-color: $accent;
+    color: $primary-text;
+
+    transition: all 250ms;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .project-button {
+        font-size: 1.5rem;
+    }
+}
+
+.project-button:hover {
+    background-color: darken($color: $accent, $amount: 20%);
+}

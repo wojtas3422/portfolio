@@ -1,12 +1,14 @@
 import React, { useRef, useEffect } from 'react'
-import { motion, animate, stagger, useMotionValueEvent, useScroll } from 'framer-motion'
+import { motion, animate, stagger } from 'framer-motion'
 import SmoothScroll from './components/SmoothScroll'
+import Project from './components/Project'
+import Footer from './components/Footer'
 
 export default function App() {
 
 	// Hero
-	const heroSectRef = useRef(null)
-	const helloSectRef = useRef(null)
+	const heroSectRef = useRef()
+	const helloSectRef = useRef()
 
 	useEffect(() => {
 		animate('.hero-star-container', { opacity: 1 }, { delay: stagger(0.13), duration: 1, stiffness: 100 })
@@ -28,8 +30,8 @@ export default function App() {
 
 	let wojtekoLetters = 'wojteko.dev'.split('')
 
+	// contact
 
-	// Hello
 
 	return (
 		<>
@@ -49,7 +51,7 @@ export default function App() {
 						return <motion.span initial={{ opacity: 0 }} className='hero-letter'>{letter}</motion.span>
 					})}</h1>
 					<motion.p initial={{ y: 50, opacity: 0 }} className='hero-subtitle'>Front-end developer</motion.p>
-					<motion.img className='hero-arrow' src='/icons/arrow.svg' />
+					<motion.img onClick={() => helloSectRef.current.scroll} className='hero-arrow' src='/icons/arrow.svg' />
 				</section>
 				<section ref={helloSectRef} className='hello-sect'>
 					<h1 style={{ translate: `0% 0%` }} className='hello-text'>
@@ -58,6 +60,23 @@ export default function App() {
 						<p>Od 4 lat pasjonuje się stronami internetowymi.</p>
 					</h1>
 				</section>
+
+				<Project title="Gruba Meble" desc="Mój pierwszy poważniejszy projekt. Strona dla lokalnego biznesu mebli na wymiar." pictureLeft={true} link="http://grubameble.pl/" img="/images/projects/grubaMeble.webp" />
+				<Project title="Kariuwuga" desc="Strona internetowa dla bota na Discorda. Jeden z moich prywatnych projektów z którego jestem bardziej zadowolony :)" pictureLeft={false} link="https://kariuwuga.xyz/" img="/images/projects/kariuwuga.webp" />
+
+				<section className='contact-sect'>
+					<div>
+						
+					</div>
+					<div className='contact-text'>
+						<h1 className='contact-heading'>Kontakt</h1>
+						<a className='contact-link' href="mailto:me@wojteko.dev">
+							<img className='contact-icon' src="/icons/mail.svg" alt="Mail: " /> me@wojteko.dev
+						</a>
+					</div>
+				</section>
+
+				<Footer />
 			</SmoothScroll>
 		</>
 	)

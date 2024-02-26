@@ -1,0 +1,24 @@
+@import 'variables';
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    border-top: 2px solid $accent;
+    padding: 2rem;
+}
+
+.footer-heading {
+    color: $accent;
+    font-size: 5rem;
+}
+
+.footer-link {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+}

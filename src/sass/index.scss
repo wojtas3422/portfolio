@@ -1,9 +1,9 @@
-@use 'sass:color';
 @import "@fontsource/poppins";
 @import "@fontsource/poppins/700.css";
 @import 'hero';
 @import 'variables';
 @import 'hello';
+@import 'contact';
 
 // best css linijka in świat
 * {
@@ -14,6 +14,9 @@
     user-select: none;
 }
 
+body {
+    background-color: $primary-bg;
+}
 
 .scrollBody {
     width: 100vw;
