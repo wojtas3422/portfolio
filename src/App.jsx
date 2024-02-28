@@ -72,7 +72,7 @@ export default function App() {
 				<div className='contact-text'>
 					<h1 className='contact-heading'>Kontakt</h1>
 					<a className='contact-link' href="mailto:me@wojteko.dev">
-						<img className='contact-icon' src="/portfolio/icons/mail.svg" alt="M" /> me@wojteko.dev
+						<img className='contact-icon' src="/icons/mail.svg" alt="M" /> me@wojteko.dev
 					</a>
 				</div>
 				<div ref={contactStarContainerRef} className='contact-star-container'>

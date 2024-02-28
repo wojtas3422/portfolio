@@ -16,7 +16,7 @@ export default function Project(props) {
                         transform: imageInView ? "none" : props.pictureLeft ? 'translateX(-200px)' : 'translateX(200px)',
                         opacity: imageInView ? 1 : 0,
                         transition: "all 0.9s ease 0.5s",
-                        backgroundImage: `url(/portfolio${props.img})`
+                        backgroundImage: `url${props.img})`
                     }}
                     className={`project-img  ${props.pictureLeft ? '' : 'project-img-right'}`}
                 />
