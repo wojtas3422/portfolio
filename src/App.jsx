@@ -3,14 +3,16 @@ import { motion, animate, stagger } from 'framer-motion'
 import SmoothScroll from './components/SmoothScroll'
 import Project from './components/Project'
 import Footer from './components/Footer'
+import { useInView } from 'framer-motion'
 
 export default function App() {
 
-	// Hero
-	const heroSectRef = useRef()
 	const helloSectRef = useRef()
+	const heroSectRef = useRef()
 	const contactStarContainerRef = useRef()
 
+
+	// Hero
 	useEffect(() => {
 		animate('.hero-star-container', { opacity: 1 }, { delay: stagger(0.13), duration: 1, stiffness: 100 })
 		animate('.hero-letter', { opacity: 1 }, { delay: stagger(0.1), duration: 1, stiffness: 100 })
@@ -31,8 +33,11 @@ export default function App() {
 
 	let wojtekoLetters = 'wojteko.dev'.split('')
 
-	// contact
-	const contactStarAmmount = 9
+	const heroScroll = (e) => {
+		e.preventDefault()
+		console.log("scroll")
+		helloSectRef.current.scrollIntoView({ behaviour: smooth })
+	}
 
 	return (
 		<>
@@ -55,7 +60,6 @@ export default function App() {
 						return <motion.span initial={{ opacity: 0 }} className='hero-letter'>{letter}</motion.span>
 					})}</h1>
 					<motion.p initial={{ y: 50, opacity: 0 }} className='hero-subtitle'>Front-end developer</motion.p>
-					<motion.img onClick={() => helloSectRef.current.scroll} className='hero-arrow' src='/icons/arrow.svg' />
 				</section>
 				<section ref={helloSectRef} className='hello-sect'>
 					<h1 style={{ translate: `0% 0%` }} className='hello-text'>
@@ -69,6 +73,12 @@ export default function App() {
 				<Project title="Kariuwuga" desc="Strona internetowa dla bota na Discorda. Jeden z moich prywatnych projektów z którego jestem bardziej zadowolony :)" pictureLeft={false} link="https://kariuwuga.xyz/" img="/images/projects/kariuwuga.webp" />
 
 				<section className='contact-sect'>
+					<div className='contact-text'>
+						<h1 className='contact-heading'>Kontakt</h1>
+						<a className='contact-link' href="mailto:me@wojteko.dev">
+							<img className='contact-icon' src="/icons/mail.svg" alt="M" /> me@wojteko.dev
+						</a>
+					</div>
 					<div ref={contactStarContainerRef} className='contact-star-container'>
 						{stars.map((star, index) => {
 							return <motion.div
@@ -83,14 +93,8 @@ export default function App() {
 							</motion.div>
 						})}
 					</div>
-					<div className='contact-text'>
-						<h1 className='contact-heading'>Kontakt</h1>
-						<a className='contact-link' href="mailto:me@wojteko.dev">
-							<img className='contact-icon' src="/icons/mail.svg" alt="M" /> me@wojteko.dev
-						</a>
-					</div>
-				</section>
 
+				</section>
 				<Footer />
 			</SmoothScroll>
 		</>

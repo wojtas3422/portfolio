@@ -1,3 +1,5 @@
+// Smooth scroll from https://dev.to/ironcladdev/smooth-scrolling-with-react-framer-motion-dih <3
+
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 
