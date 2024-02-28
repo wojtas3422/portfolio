@@ -8,7 +8,7 @@ export default function SmoothScroll({ children }) {
     const { scrollYProgress } = useScroll();
 
     // Use framer motion's useSpring() hook to smooth the scrollYProgress value
-    const smoothProgress = useSpring(scrollYProgress, { mass: 0.05 })
+    const smoothProgress = scrollYProgress
 
     // The height of the content in pixels
     const [contentHeight, setContentHeight] = useState(0);
@@ -39,16 +39,7 @@ export default function SmoothScroll({ children }) {
 
     return (
         <>
-            {/**
-        * An invisible div with the actual height of the content.
-        * This will expand the height of the body and trigger the default browser scrollbar.
-        */}
             <div style={{ height: contentHeight }} />
-
-            {/** 
-        * The content.  If it exceeds the height of the viewport, translate its y-position to the top.
-        * Its position is fixed by default and moves when the user scrolls.
-        */}
             <motion.div
                 className="scrollBody"
                 style={{ y }}
