@@ -66,7 +66,7 @@ export default function App() {
 			</section>
 
 			<Project title="Gruba Meble" desc="Mój pierwszy poważniejszy projekt. Strona dla lokalnego biznesu mebli na wymiar." pictureLeft={true} link="http://grubameble.pl/" img="/images/projects/grubaMeble.webp" />
-			<Project title="Kariuwuga" desc="Strona internetowa dla bota na Discorda. Jeden z moich prywatnych projektów z którego jestem bardziej zadowolony :)" pictureLeft={false} link="https://kariuwuga.xyz/" img="/images/projects/kariuwuga.webp" />
+			<Project title="Kariuwuga" desc="Strona internetowa dla bota na Discorda." pictureLeft={false} link="https://kariuwuga.xyz/" img="/images/projects/kariuwuga.webp" />
 
 			<section className='contact-sect'>
 				<div className='contact-text'>
