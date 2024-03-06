@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react'
 import { motion, animate, stagger } from 'framer-motion'
-import SmoothScroll from './components/SmoothScroll'
 import Project from './components/Project'
 import Footer from './components/Footer'
 import { useInView } from 'framer-motion'
@@ -37,7 +36,6 @@ export default function App() {
 
 	return (
 		<>
-			{/* TODO fix smooth scrolling <SmoothScroll> */}
 			<section ref={heroSectRef} className='hero-sect'>
 				{stars.map((star, index) => {
 					return <motion.div
@@ -71,8 +69,8 @@ export default function App() {
 			<section className='contact-sect'>
 				<div className='contact-text'>
 					<h1 className='contact-heading'>Kontakt</h1>
-					<a className='contact-link' href="mailto:me@wojteko.dev">
-						<img className='contact-icon' src="/icons/mail.svg" alt="M" /> me@wojteko.dev
+					<a className='contact-link' href="mailto:wojtekodev@proton.me">
+						<img className='contact-icon' src="/icons/mail.svg" alt="M" /> wojtekodev@proton.me
 					</a>
 				</div>
 				<div ref={contactStarContainerRef} className='contact-star-container'>
@@ -89,10 +87,8 @@ export default function App() {
 						</motion.div>
 					})}
 				</div>
-
 			</section>
 			<Footer />
-		{/* </SmoothScroll> */}
 		</>
 	)
 }

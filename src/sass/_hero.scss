@@ -51,6 +51,7 @@
     cursor: pointer;
     z-index: 99;
     translate: -50% -50%;
+    overflow: hidden;
 }
 
 @keyframes spin {
