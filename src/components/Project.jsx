@@ -18,7 +18,7 @@ export default function Project(props) {
                         transition: "all 0.9s ease 0.5s",
                         backgroundImage: `url(${props.img})`
                     }}
-                    className={`project-img  ${props.pictureLeft ? '' : 'project-img-right'}`}
+                    className={`project-img  ${props.pictureLeft ? '' : 'project-img-right'} ${props.translateHalf ? 'bg-translate-half' : ''}`}
                 />
             </div>
             <div className={`project-container ${props.pictureLeft ? 'project-text-left' : 'project-text-right'}`}>

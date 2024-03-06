@@ -34,11 +34,14 @@
 // img tag
 .project-img {
     height: 80%;
-    background-position: 50% 50%;
+    background-position: 10% 50%;
     margin-right: 2rem;
     border-radius: 0px 12px 12px 0px;
     border: 1px solid $accent;
-    
+}
+
+.bg-translate-half {
+    background-position: 50% 50%;
 }
 
 @media (max-width: 768px) {
