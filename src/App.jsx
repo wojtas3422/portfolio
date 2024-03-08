@@ -73,7 +73,7 @@ export default function App() {
 						<img className='contact-icon' src="/icons/mail.svg" alt="M" /> wojtekodev@proton.me
 					</a>
 					<a className='contact-link' href="">
-						<img src="" alt="" />
+						<img className='contact-icon' src="/icons/facebook.svg" alt="Fb" /> Strona na Facebook'u
 					</a>
 				</div>
 				<div ref={contactStarContainerRef} className='contact-star-container'>
