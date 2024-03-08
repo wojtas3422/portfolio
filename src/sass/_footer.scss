@@ -16,6 +16,7 @@ footer {
     text-decoration: none;
     cursor: pointer;
     font-size: 1.5rem;
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
@@ -35,5 +36,7 @@ footer {
 
 .footer-left {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
 }

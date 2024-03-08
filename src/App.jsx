@@ -72,6 +72,9 @@ export default function App() {
 					<a className='contact-link' href="mailto:wojtekodev@proton.me">
 						<img className='contact-icon' src="/icons/mail.svg" alt="M" /> wojtekodev@proton.me
 					</a>
+					<a className='contact-link' href="">
+						<img src="" alt="" />
+					</a>
 				</div>
 				<div ref={contactStarContainerRef} className='contact-star-container'>
 					{stars.map((star, index) => {
